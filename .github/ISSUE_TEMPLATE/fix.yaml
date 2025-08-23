@@ -1,26 +1,19 @@
-name: Issue
-description: Issue Template
-title: "<title>"
+name: Bug Report
+description: Create a report to help us improve
+title: "[BUG] "
 body:
-- type: dropdown
-  id: issue-type
-  attributes:
-    label: Issue Type
-    description: "What type of issue is this?"
-    multiple: false
-    options:
-    - Feature
-    - Bug
-    - Documentation
-    - Other
-  validations:
-    required: true
 - type: textarea
   attributes:
     label: Context
     description: "A concise description of the problem with any relevant additional references."
   validations:
     required: true
+- type: textarea
+  attributes:
+    label: Slack References
+    description: "Link to relevant Slack conversations, threads, or messages. You can add multiple references by separating them with new lines."
+  validations:
+    required: false
 - type: textarea
   attributes:
     label: Current Behavior
@@ -56,38 +49,23 @@ body:
 - type: textarea
   attributes:
     label: Steps To Reproduce
-    description: "How do you trigger this bug? Please walk us through it step by step. This field is only shown for bug reports." 
+    description: "How do you trigger this bug? Please walk us through it step by step."
     value: |
       Steps to reproduce the behavior - 
         1. In this environment...
         1. With this config...
         1. Run '...'
-        1. See error... -->
+        1. See error...
   validations:
-    required: false
-  conditional:
-    field: issue-type
-    value: Bug
+    required: true
 - type: textarea
   attributes:
     label: Environment
-    description: "Environment the bug was reproduced on. This field is only shown for bug reports."
+    description: "Environment the bug was reproduced on."
     value: |
           - **OS**:
           - **Node**:
           - **npm**:
           - **Browser**:
   validations:
-    required: false
-  conditional:
-    field: issue-type
-    value: Bug
-- type: dropdown
-  id: browsers
-  attributes:
-    label: "Can the scope of the problem be broken down to smaller pieces?"
-    description: "Please consider if this issue is a small issue that describes a single a problem or flag this as an Epic so a series of issues could be referenced to it."
-    multiple: false
-    options:
-    - This is a small issue
-    - This is an Epic
+    required: true
