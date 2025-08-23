@@ -4,34 +4,23 @@ title: "[FEATURE] "
 body:
 - type: textarea
   attributes:
-    label: Context
-    description: "A concise description of the problem with any relevant additional references."
+    label: "Context"
+    description: "Please provide the following information:"
+    value: |
+      <!-- Describe your feature request here -->
+
+      ##### Current Behavior
+      <!-- Describe what currently happens -->
+
+      ##### Expected Behavior
+      <!-- Describe what you expect to happen -->
+
+      ##### References 
+      <!-- Add links to relevant Slack or Zenhub conversations -->
+
+      ---
+
+      - [ ] This is an epic issue that will be broken down into smaller, manageable tasks
+      - [ ] This feature requires testing in a staging environment before production deployment
   validations:
     required: true
-- type: textarea
-  attributes:
-    label: Slack References
-    description: "Link to relevant Slack conversations, threads, or messages. You can add multiple references by separating them with new lines."
-  validations:
-    required: false
-- type: textarea
-  attributes:
-    label: Current Behavior
-    description: "A concise description of what you are experiencing."
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Expected Behavior
-    description: "A concise description of what you expected to happen."
-  validations:
-    required: true
-- type: dropdown
-  id: browsers
-  attributes:
-    label: "Can the scope of the problem be broken down to smaller pieces?"
-    description: "Please consider if this issue is a small issue that describes a single a problem or flag this as an Epic so a series of issues could be referenced to it."
-    multiple: false
-    options:
-    - This is a small issue
-    - This is an Epic 
