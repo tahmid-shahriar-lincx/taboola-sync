@@ -1,0 +1,93 @@
+name: Issue
+description: Issue Template
+title: "<title>"
+body:
+- type: dropdown
+  id: issue-type
+  attributes:
+    label: Issue Type
+    description: "What type of issue is this?"
+    multiple: false
+    options:
+    - Feature
+    - Bug
+    - Documentation
+    - Other
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Context
+    description: "A concise description of the problem with any relevant additional references."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Current Behavior
+    description: "A concise description of what you are experiencing."
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Expected Behavior
+    description: "A concise description of what you expected to happen."
+  validations:
+    required: true
+- type: dropdown
+  id: has-expected-screenshot
+  attributes:
+    label: Do you have a screenshot of the expected behavior?
+    description: "Select whether you have a screenshot showing what the expected behavior should look like."
+    multiple: false
+    options:
+    - Yes
+    - No
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Screenshots (Expected)
+    description: "Screenshots or a recording of the expected solution if any. *optional*"
+  validations:
+    required: false
+  conditional:
+    field: has-expected-screenshot
+    value: Yes
+- type: textarea
+  attributes:
+    label: Steps To Reproduce
+    description: "How do you trigger this bug? Please walk us through it step by step. This field is only shown for bug reports." 
+    value: |
+      Steps to reproduce the behavior - 
+        1. In this environment...
+        1. With this config...
+        1. Run '...'
+        1. See error... -->
+  validations:
+    required: false
+  conditional:
+    field: issue-type
+    value: Bug
+- type: textarea
+  attributes:
+    label: Environment
+    description: "Environment the bug was reproduced on. This field is only shown for bug reports."
+    value: |
+          - **OS**:
+          - **Node**:
+          - **npm**:
+          - **Browser**:
+  validations:
+    required: false
+  conditional:
+    field: issue-type
+    value: Bug
+- type: dropdown
+  id: browsers
+  attributes:
+    label: "Can the scope of the problem be broken down to smaller pieces?"
+    description: "Please consider if this issue is a small issue that describes a single a problem or flag this as an Epic so a series of issues could be referenced to it."
+    multiple: false
+    options:
+    - This is a small issue
+    - This is an Epic
