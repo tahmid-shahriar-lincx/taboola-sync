@@ -26,26 +26,6 @@ body:
     description: "A concise description of what you expected to happen."
   validations:
     required: true
-- type: dropdown
-  id: has-expected-screenshot
-  attributes:
-    label: Do you have a screenshot of the expected behavior?
-    description: "Select whether you have a screenshot showing what the expected behavior should look like."
-    multiple: false
-    options:
-    - Yes
-    - No
-  validations:
-    required: true
-- type: textarea
-  attributes:
-    label: Screenshots (Expected)
-    description: "Screenshots or a recording of the expected solution if any. *optional*"
-  validations:
-    required: false
-  conditional:
-    field: has-expected-screenshot
-    value: Yes
 - type: textarea
   attributes:
     label: Steps To Reproduce
@@ -69,3 +49,12 @@ body:
           - **Browser**:
   validations:
     required: true
+- type: dropdown
+  id: browsers
+  attributes:
+    label: "Can the scope of the problem be broken down to smaller pieces?"
+    description: "Please consider if this issue is a small issue that describes a single a problem or flag this as an Epic so a series of issues could be referenced to it."
+    multiple: false
+    options:
+    - This is a small issue
+    - This is an Epic
