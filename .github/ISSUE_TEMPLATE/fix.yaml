@@ -4,31 +4,31 @@ title: "[BUG] "
 body:
 - type: textarea
   attributes:
-    label: Context
+    label: "# Context"
     description: "A concise description of the problem with any relevant additional references."
   validations:
     required: true
 - type: textarea
   attributes:
-    label: Slack References
+    label: "### Slack References"
     description: "Link to relevant Slack conversations, threads, or messages. You can add multiple references by separating them with new lines."
   validations:
     required: false
 - type: textarea
   attributes:
-    label: Current Behavior
+    label: "### Current Behavior"
     description: "A concise description of what you are experiencing."
   validations:
     required: true
 - type: textarea
   attributes:
-    label: Expected Behavior
+    label: "### Expected Behavior"
     description: "A concise description of what you expected to happen."
   validations:
     required: true
 - type: textarea
   attributes:
-    label: Steps To Reproduce
+    label: "### Steps To Reproduce"
     description: "How do you trigger this bug? Please walk us through it step by step."
     value: |
       Steps to reproduce the behavior - 
@@ -40,7 +40,7 @@ body:
     required: true
 - type: textarea
   attributes:
-    label: Environment
+    label: "### Environment"
     description: "Environment the bug was reproduced on."
     value: |
           - **OS**:
@@ -52,7 +52,7 @@ body:
 - type: dropdown
   id: browsers
   attributes:
-    label: "Can the scope of the problem be broken down to smaller pieces?"
+    label: "##### Can the scope of the problem be broken down to smaller pieces?"
     description: "Please consider if this issue is a small issue that describes a single a problem or flag this as an Epic so a series of issues could be referenced to it."
     multiple: false
     options:
