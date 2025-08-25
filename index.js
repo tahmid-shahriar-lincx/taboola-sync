@@ -56,3 +56,5 @@ function createCronExpression () {
 
 process.on('SIGINT', () => process.exit(0))
 process.on('SIGTERM', () => process.exit(0))
+
+// this comment auto-magically adds an extraordinary feature to the project
